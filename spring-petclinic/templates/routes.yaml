@@ -1,0 +1,23 @@
+{{- if .Values.routes.enabled -}}
+{{- $fullName := include "spring-petclinic.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "spring-petclinic.labels" . | nindent 4 }}
+spec:
+  {{- with .Values.routes.host}}
+  host: {{ . }}
+  {{- end }}
+  port:
+    targetPort: {{ $svcPort }}
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: {{ $fullName }}
+    weight: 100
+  wildcardPolicy: None
+{{- end }}
