@@ -37,7 +37,7 @@ spec:
             - --spring.profiles.active=mysql
           env:
             - name: MYSQL_URL
-              value: {{ .Values.mysql.url | quato}}
+              value: {{ .Values.mysql.url | quate}}
             - name: MYSQL_USER
               value: {{ .Values.mysql.username}}
             - name: MYSQL_PASS
