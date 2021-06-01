@@ -34,7 +34,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- if .Values.routes.enabled -}}
           args:
-            - --spring.profiles.active=mysql
+            - "--spring.profiles.active=mysql"
           env:
             - name: MYSQL_URL
               value: {{ .Values.mysql.url | quote }}
