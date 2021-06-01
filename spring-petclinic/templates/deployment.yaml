@@ -32,3 +32,14 @@ spec:
               port: 8080
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.routes.enabled }}
+          args:
+            - "--spring.profiles.active=mysql"
+          env:
+            - name: MYSQL_URL
+              value: {{ .Values.mysql.url | quote }}
+            - name: MYSQL_USER
+              value: {{ .Values.mysql.username }}
+            - name: MYSQL_PASS
+              value: {{ .Values.mysql.password }}
+          {{- end }}
