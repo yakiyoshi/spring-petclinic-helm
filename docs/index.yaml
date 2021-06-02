@@ -3,7 +3,7 @@ entries:
   spring-petclinic:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-06-02T11:09:05.5186949+09:00"
+    created: "2021-06-02T13:33:54.4999022+09:00"
     description: A Helm chart for Kubernetes
     digest: c4ee41035bc5916420f438736d10afdd4da77c6c542486669d31e06174d2298f
     name: spring-petclinic
@@ -13,12 +13,12 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-06-02T11:09:05.5178933+09:00"
+    created: "2021-06-02T13:33:54.4992872+09:00"
     description: A Helm chart for Kubernetes
-    digest: 21b58a73af9e39c84483b8e282164cf72ea8bd8016f6224ae4fe6ffb83257f39
+    digest: 9ce13806566850b630d0b31f60b86c25a989177d8e8a7293b6a7759d2bfde5f1
     name: spring-petclinic
     type: application
     urls:
     - https://yakiyoshi.github.io/spring-petclinic-helm/spring-petclinic-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-02T11:09:05.5155367+09:00"
+generated: "2021-06-02T13:33:54.4970738+09:00"
